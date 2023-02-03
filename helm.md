@@ -11,3 +11,10 @@ helm install prometheus prometheus-community/prometheus \
   --create-namespace \
   --namespace prometheus
 ```
+
+Install kube-state-metrics:
+```bash
+helm install kube-state-metrics prometheus-community/kube-state-metrics \
+  --create-namespace \
+  --namespace prometheus
+```
