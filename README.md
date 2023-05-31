@@ -21,3 +21,8 @@ helm install kube-state-metrics prometheus-community/kube-state-metrics \
   --create-namespace \
   --namespace prometheus
 ```
+
+Service to be used in Lens:
+```
+prometheus/prometheus-server:9090
+```
