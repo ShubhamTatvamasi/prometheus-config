@@ -32,7 +32,15 @@ Install grafana:
 ```bash
 helm upgrade -i grafana grafana/grafana \
   --create-namespace \
-  --namespace grafana
+  --namespace grafana \
+  --set service.type=LoadBalancer
+```
+
+Get password for dashboard:
+```
+kubectl get secret --namespace grafana grafana \
+  -o jsonpath="{.data.admin-password}" \
+  | base64 --decode ; echo
 ```
 
 ---
