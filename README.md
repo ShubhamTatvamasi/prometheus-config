@@ -36,7 +36,7 @@ helm upgrade -i grafana grafana/grafana \
   --set service.type=LoadBalancer
 ```
 
-Get password for dashboard:
+Username `admin`, get password for dashboard:
 ```
 kubectl get secret --namespace grafana grafana \
   -o jsonpath="{.data.admin-password}" \
