@@ -15,6 +15,13 @@ helm upgrade -i prometheus prometheus-community/prometheus \
   --namespace prometheus
 ```
 
+Service to be used in Lens:
+```
+prometheus/prometheus-server:9090
+```
+
+---
+
 Install kube-state-metrics:
 ```bash
 helm install kube-state-metrics prometheus-community/kube-state-metrics \
@@ -22,7 +29,4 @@ helm install kube-state-metrics prometheus-community/kube-state-metrics \
   --namespace prometheus
 ```
 
-Service to be used in Lens:
-```
-prometheus/prometheus-server:9090
-```
+
