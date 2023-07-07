@@ -22,6 +22,21 @@ prometheus/prometheus-server:9090
 
 ---
 
+Add grafana repo:
+```bash
+helm repo add grafana https://grafana.github.io/helm-charts
+helm repo update
+```
+
+Install grafana:
+```bash
+helm upgrade -i grafana grafana/grafana \
+  --create-namespace \
+  --namespace grafana
+```
+
+---
+
 Install kube-state-metrics:
 ```bash
 helm install kube-state-metrics prometheus-community/kube-state-metrics \
