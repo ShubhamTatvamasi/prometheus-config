@@ -43,6 +43,11 @@ kubectl get secret --namespace grafana grafana \
   | base64 --decode ; echo
 ```
 
+Service to be used in grafana:
+```
+http://prometheus-server.prometheus
+```
+
 ---
 
 Install kube-state-metrics:
