@@ -33,7 +33,8 @@ Install grafana:
 helm upgrade -i grafana grafana/grafana \
   --create-namespace \
   --namespace grafana \
-  --set service.type=LoadBalancer
+  --set service.type=LoadBalancer \
+  --set persistence.enabled=true
 ```
 
 Username `admin`, get password for dashboard:
