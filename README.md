@@ -2,6 +2,18 @@
 
 ### helm
 
+
+Install prometheus:
+```
+helm upgrade -i prometheus \
+  oci://ghcr.io/prometheus-community/charts/prometheus \
+  --create-namespace \
+  --namespace prometheus
+```
+
+
+---
+
 Add prometheus repo:
 ```bash
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
