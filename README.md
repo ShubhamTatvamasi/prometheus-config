@@ -7,7 +7,7 @@ https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-promet
 Install prometheus operator with grafana:
 ```bash
 helm upgrade -i kube-prometheus-stack \
-  oci://ghcr.io/prometheus-community/charts/kube-prometheus-stack
+  oci://ghcr.io/prometheus-community/charts/kube-prometheus-stack \
   --create-namespace \
   --namespace monitoring
 ```
