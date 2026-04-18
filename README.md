@@ -9,7 +9,8 @@ Install prometheus operator with grafana:
 helm upgrade -i kube-prometheus-stack \
   oci://ghcr.io/prometheus-community/charts/kube-prometheus-stack \
   --create-namespace \
-  --namespace monitoring
+  --namespace monitoring \
+  --set grafana.service.type=LoadBalancer
 ```
 
 ---
