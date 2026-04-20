@@ -10,6 +10,7 @@ helm upgrade -i kube-prometheus-stack \
   oci://ghcr.io/prometheus-community/charts/kube-prometheus-stack \
   --create-namespace \
   --namespace monitoring \
+  --set prometheus.service.type=LoadBalancer \
   --set grafana.service.type=LoadBalancer \
   --set grafana.adminUser=admin \
   --set grafana.adminPassword=admin
