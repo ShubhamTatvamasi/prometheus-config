@@ -17,6 +17,34 @@ helm upgrade -i kube-prometheus-stack \
 
 ---
 
+```yaml
+kubectl apply -f - << EOF
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: airflow-statsd
+  namespace: airflow
+  labels:
+    release: airflow
+spec:
+  selector:
+    matchLabels:
+      tier: airflow
+      component: statsd
+      release: airflow
+  namespaceSelector:
+    matchNames:
+      - airflow
+  endpoints:
+    - port: statsd-scrape
+      interval: 30s
+      path: /metrics
+      scheme: http
+EOF
+```
+
+---
+
 Install prometheus:
 ```
 helm upgrade -i prometheus \
