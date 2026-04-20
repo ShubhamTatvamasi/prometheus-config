@@ -11,6 +11,7 @@ helm upgrade -i kube-prometheus-stack \
   --create-namespace \
   --namespace monitoring \
   --set prometheus.service.type=LoadBalancer \
+  --set prometheus.prometheusSpec.serviceMonitorNamespaceSelector.matchLabels.monitoring=enabled \
   --set grafana.service.type=LoadBalancer \
   --set grafana.adminUser=admin \
   --set grafana.adminPassword=admin
