@@ -27,7 +27,7 @@ metadata:
   name: airflow-statsd
   namespace: airflow
   labels:
-    release: airflow
+    release: kube-prometheus-stack
 spec:
   selector:
     matchLabels:
