@@ -46,6 +46,13 @@ EOF
 
 ---
 
+Restart prometheus:
+```bash
+kubectl rollout restart statefulset prometheus-kube-prometheus-stack-prometheus -n monitoring
+```
+
+---
+
 Install prometheus:
 ```
 helm upgrade -i prometheus \
