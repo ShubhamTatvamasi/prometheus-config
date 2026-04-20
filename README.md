@@ -41,7 +41,6 @@ spec:
     - port: statsd-scrape
       interval: 30s
       path: /metrics
-      scheme: http
 EOF
 ```
 
